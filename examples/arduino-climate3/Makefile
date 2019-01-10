@@ -4,7 +4,7 @@ EXE=arduino-example
 
 all: $(EXE)
 
-CONTIKI=../../..
+CONTIKI=../../osd-contiki
 
 CFLAGS += -DPROJECT_CONF_H=\"project-conf.h\"
 LFLAGS += -lm

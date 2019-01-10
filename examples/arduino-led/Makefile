@@ -6,7 +6,7 @@ all: $(EXE)
 
 sketch.cpp: led_setting.h
 
-CONTIKI=../../..
+CONTIKI=../../osd-contiki
 
 # Contiki IPv6 configuration
 CONTIKI_WITH_IPV6 = 1

@@ -4,7 +4,7 @@ EXE=arduino-example
 
 all: $(EXE)
 
-CONTIKI=../../../../osd-contiki
+CONTIKI=../../osd-contiki
 
 # Contiki IPv6 configuration
 CONTIKI_WITH_IPV6 = 1

@@ -1,0 +1,3 @@
+[submodule "osd-contiki"]
+	path = osd-contiki
+	url = https://github.com/osdomotics/osd-contiki.git

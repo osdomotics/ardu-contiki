@@ -28,7 +28,7 @@ extern resource_t res_battery, res_distance;
 
 }
 
-Ultrasonic ultrasonic(7);
+Ultrasonic ultrasonic(3);
 
 long RangeInInches;
 long RangeInCentimeters;
@@ -40,18 +40,20 @@ void setup (void)
     digitalWrite(LED_PIN, HIGH);
     // init coap resourcen
     rest_init_engine ();
+    #pragma GCC diagnostic ignored "-Wwrite-strings"
     rest_activate_resource (&res_battery, "s/battery");
     rest_activate_resource (&res_distance, "s/distance");
-
+    #pragma GCC diagnostic pop
+    
     printf("The distance to obstacles in front is: \n");
 }
 
 void loop (void)
 {
 //        RangeInInches = ultrasonic.MeasureInInches();
-//        printf(" %d inch\n",RangeInInches);
+//        printf(" %ld inch\n",RangeInInches);
 
         RangeInCentimeters = ultrasonic.MeasureInCentimeters(); // two measurements should keep an interval
-        printf(" %d cm\n",RangeInCentimeters);//0~400cm
+        printf(" %ld cm\n",RangeInCentimeters);//0~400cm
 }
 

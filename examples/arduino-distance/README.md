@@ -9,3 +9,13 @@ a `main` function (in C). For contiki we define a process that does the
 same.
 
 See the documentation file in apps/contiki-compat/README.md
+
+Build
+-----
+make clean TARGET=osd-merkur-256 flash
+
+Bebug Serial Line
+-----------------
+
+screen /dev/ttyUSB0 38400
+

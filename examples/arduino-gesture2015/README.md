@@ -1,10 +1,10 @@
-BH1750 Digital Light Sensor
-===========================
+paj7620 Digital i2c Geasture Sensor
+===================================
 
-Simple demo to read out sensors from the BH1750 sensor.
+Simple demo to read out sensors from the paj7620 sensor.
 
-Demo uses the BH1750FVI Arduino library.
-This library interfaces with the BH1750FVI ambient light sensor.
+Demo uses the paj7620 Arduino library.
+This library interfaces with the paj7620 Geasture Sensor.
 
 Build
 -----

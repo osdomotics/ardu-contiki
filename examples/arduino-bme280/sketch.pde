@@ -45,8 +45,8 @@ void setup (void)
 
     bool status;
     
-    // default settings
-    status = bme.begin(0x77);
+    // default settings 0x77 or 0x76
+    status = bme.begin(0x76);
     if (!status) {
         printf("Could not find a valid BME280 sensor, check wiring!");
     }
@@ -78,9 +78,9 @@ void loop (void)
     dtostrf(bmphum , 0, 2, bmphum_s );
          
 // Debug Print
-//    printf("Temp: %s\n",bmptemp_s);
-//    printf("Press: %s\n",bmppress_s);
-//    printf("Altitude: %s\n",bmpalt_s);
-//    printf("atm: %s\n",bmpatm_s);
-//    printf("hum: %s\n",bmphum_s);   
+    printf("Temp: %s\n",bmptemp_s);
+    printf("Press: %s\n",bmppress_s);
+    printf("Altitude: %s\n",bmpalt_s);
+    printf("atm: %s\n",bmpatm_s);
+    printf("hum: %s\n",bmphum_s);   
 }

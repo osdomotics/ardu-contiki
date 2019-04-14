@@ -136,13 +136,18 @@ void loop (void)
       //canvas.print (((float)battery_voltage)/1000, 1);
 
       canvas.setFont(&arialbd48pt7b);
-      canvas.setCursor(10, 125);
+      canvas.setCursor(10, 115);
       canvas.print (bmptemp, 1);
 
       canvas.setFont(&arialbd20pt7b);
-      canvas.setCursor(50, 175);
+      canvas.setCursor(50, 155);
       canvas.print (bmphum, 1);
       canvas.println (F("%"));
+
+      canvas.setFont(&arialbd20pt7b);
+      canvas.setCursor(20, 190);
+      canvas.print (bmpatm, 1);
+      canvas.println (F("hPa"));
 
       epd.SetFrameMemory(canvas.getBuffer(), 0, 0, 200, 200);
       epd.DisplayFrame();
